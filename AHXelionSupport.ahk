@@ -1,10 +1,18 @@
 ﻿#Requires AutoHotkey v2.0
 
+; Define a hotkey for reloading the script
+F7::Reload()
+
+; Read the value of myVar from the file
+myVar := FileRead("myVar.txt")
 
 
-F2::Send "Met vriendelijke groet`n{Name}"
-F3::Send "Goedemorgen,`n`nWegens het uitblijven van een reactie zal ik dit ticket sluiten.`nMocht dit issue nog niet zijn opgelost ontvang ik graag een reactie op onderstaande vragen.`n`nMet vriendelijke groet,`n{Name}"
-F4::Send "Goedemiddag,`n`nWegens het uitblijven van een reactie zal ik dit ticket sluiten.`nMocht dit issue nog niet zijn opgelost ontvang ik graag een reactie op onderstaande vragen.`n`nMet vriendelijke groet,`n{Name}"
+
+
+MsgBox("Hello, " . myVar . "!") ; This is just a test to see if this "
+F2::Send("Met vriendelijke groet`r`n" . myVar)
+F3::Send("Goedemorgen,`n`nWegens het uitblijven van een reactie zal ik dit ticket sluiten.`nMocht dit issue nog niet zijn opgelost ontvang ik graag een reactie op onderstaande vragen.`n`nMet vriendelijke groet,`r`n" . myVar)
+F4::Send("Goedemiddag,`n`nWegens het uitblijven van een reactie zal ik dit ticket sluiten.`nMocht dit issue nog niet zijn opgelost ontvang ik graag een reactie op onderstaande vragen.`n`nMet vriendelijke groet,`r`n" . myVar)
 #n::Run "C:\Program Files\Notepad++\notepad++.exe"
 F1::Run "C:\Program Files\Mozilla Firefox\firefox.exe https://support.xelion.com"
 ::brb::Be right back
