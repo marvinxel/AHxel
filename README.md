@@ -1,3 +1,15 @@
+
+Update 1.2 Includes a breaking change
+
+Dependant on input.ahk and myvar.txt
+
+Running input.ahk will create a txt file that stores a variable. this variable is used in the main file.
+
+Outputs as myVar=Name
+
+
+
+
 New Update available for AHXelion,
 
 Please uninstall previous versions and run again,
